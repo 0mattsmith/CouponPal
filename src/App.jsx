@@ -56,7 +56,7 @@ function App() {
         <p style={{ color: 'var(--text-muted)', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>
           {t.description}
         </p>
-        <div style={{ marginTop: '1rem' }}>
+        <div className="hide-on-mobile" style={{ marginTop: '1rem' }}>
           <Link to="/checkout" className="btn-primary" style={{ display: 'inline-block', textDecoration: 'none', padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
             Test Extension on Mock Checkout
           </Link>

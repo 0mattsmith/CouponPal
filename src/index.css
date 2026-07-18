@@ -191,4 +191,7 @@ button {
     flex-direction: column !important;
     align-items: stretch !important;
   }
+  .hide-on-mobile {
+    display: none !important;
+  }
 }
