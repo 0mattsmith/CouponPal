@@ -51,7 +51,7 @@ function App() {
       
       <header style={{ textAlign: 'center', marginBottom: '3rem', marginTop: '2rem' }}>
         <Link to="/">
-          <img src="/logo.png" alt="CouponPal Logo" style={{ height: '180px', marginBottom: '1rem' }} />
+          <img src="./logo.png" alt="CouponPal Logo" style={{ height: '180px', marginBottom: '1rem' }} />
         </Link>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.125rem', maxWidth: '600px', margin: '0 auto' }}>
           {t.description}

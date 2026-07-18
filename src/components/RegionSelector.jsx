@@ -52,63 +52,54 @@ const RegionSelector = ({ currentRegion, onRegionChange, useLocalLanguage, setUs
             top: '100%',
             right: 0,
             marginTop: '0.5rem',
-            width: 'max-content',
-            minWidth: '220px',
-            padding: '0.5rem',
+            padding: '0.75rem',
             display: 'flex',
             flexDirection: 'column',
-            gap: '0.25rem',
+            gap: '0.5rem',
             background: 'linear-gradient(135deg, var(--color-primary), var(--color-secondary))'
           }}
         >
-          {regions.map(region => (
-            <button
-              key={region.id}
-              onClick={() => {
-                onRegionChange(region.id);
-                setIsOpen(false);
-              }}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '12px',
-                padding: '0.75rem',
-                borderRadius: '8px',
-                background: currentRegion === region.id ? 'rgba(255, 255, 255, 0.25)' : 'transparent',
-                textAlign: 'left',
-                color: 'var(--text-main)',
-                transition: 'all var(--transition-fast)',
-                transform: 'translateX(0px)'
-              }}
-              onMouseOver={(e) => {
-                if (currentRegion !== region.id) {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
-                  e.currentTarget.style.transform = 'translateX(6px)';
-                }
-              }}
-              onMouseOut={(e) => {
-                if (currentRegion !== region.id) {
-                  e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.transform = 'translateX(0px)';
-                }
-              }}
-            >
-              <span style={{ fontSize: '1.2rem' }}>{region.flag}</span>
-              <span style={{ 
-                fontWeight: 900, 
-                backgroundImage: `url(${region.flagUrl})`,
-                backgroundSize: '100% 100%',
-                backgroundPosition: 'center center',
-                backgroundRepeat: 'no-repeat',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent',
-                WebkitTextFillColor: 'transparent'
-              }}>
-                {region.name}
-              </span>
-            </button>
-          ))}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '8px'
+          }}>
+            {regions.map(region => (
+              <button
+                key={region.id}
+                title={region.name}
+                onClick={() => {
+                  onRegionChange(region.id);
+                  setIsOpen(false);
+                }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '0.5rem',
+                  borderRadius: '8px',
+                  background: currentRegion === region.id ? 'rgba(255, 255, 255, 0.25)' : 'transparent',
+                  transition: 'all var(--transition-fast)',
+                  fontSize: '1.5rem',
+                  lineHeight: 1
+                }}
+                onMouseOver={(e) => {
+                  if (currentRegion !== region.id) {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)';
+                    e.currentTarget.style.transform = 'scale(1.1)';
+                  }
+                }}
+                onMouseOut={(e) => {
+                  if (currentRegion !== region.id) {
+                    e.currentTarget.style.background = 'transparent';
+                    e.currentTarget.style.transform = 'scale(1)';
+                  }
+                }}
+              >
+                {region.flag}
+              </button>
+            ))}
+          </div>
           
           <div style={{
             marginTop: '0.5rem',

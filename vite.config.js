@@ -17,12 +17,12 @@ export default defineConfig({
         theme_color: '#8b5cf6',
         icons: [
           {
-            src: '/logo.png',
+            src: './logo.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/logo.png',
+            src: './logo.png',
             sizes: '512x512',
             type: 'image/png'
           }
