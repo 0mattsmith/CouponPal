@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Coupon Finder",
+  "name": "CouponPal",
   "version": "1.0.0",
   "description": "Discover and compare the best working promo codes instantly.",
   "action": {

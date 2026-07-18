@@ -1,5 +1,5 @@
 {
-  "name": "honeyclone",
+  "name": "couponpal",
   "private": true,
   "version": "0.0.0",
   "main": "electron/main.cjs",
