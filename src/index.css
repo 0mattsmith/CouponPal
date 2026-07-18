@@ -158,3 +158,37 @@ button {
 .animate-fade-in {
   animation: fadeIn var(--transition-normal) forwards;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  header img {
+    height: 120px !important;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  input[type=""text""], input[type=""url""] {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .glass-panel {
+    padding: 1.5rem !important;
+  }
+  
+  /* Make flex rows stack on mobile if they are using gap */
+  .mobile-stack {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+}
