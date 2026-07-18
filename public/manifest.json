@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Coupon Finder",
+  "version": "1.0.0",
+  "description": "Discover and compare the best working promo codes instantly.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Find Coupons"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["logo.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
